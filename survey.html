@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <h1 id="title" align="center">Survey Form</h1>
+
+<p style="text-align: center;" id="description">Let us know how we can improve United States International University.</p>
+
+<form action="" id="survey-form">
+  <div id="styleIt" align="center">
+     <div id="first">
+      <p>
+      <label for="1" id="name-label"><span style="color: red">*</span>Name:
+      <input id="name" type="text" size="20" required placeholder=" Enter your name">
+    </label>
+    </p>
+    <p>
+      <label for="2" class="push" id="email-label"><span style="color: red">*</span>Email:
+      <input id="email" type="email" size="20" required placeholder=" Enter your email">
+    </label>
+    </p>
+    <p>
+      <label for="3" class="pushToo" id="number-label"><span style="color: red">*</span>Age:
+      <input id="number" type="number" required placeholder=" Enter your Age" min="1" max="100">
+    </label>
+    </p>
+  </div>
+
+
+<table align = "center">
+    <tr>
+      <td>Things that should be improved in the future <br>
+(Check all that apply):</td>
+      <td><input type="checkbox">Strong WiFi connection in the whole campus</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="checkbox">School Fees Amount Deduction</td>
+      
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="checkbox">More IT Labs</td>
+   
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="checkbox">More co-curricular activities</td>
+    </tr>
+  </table>
+  
+  
+  <table align = "center">
+    <tr>
+      <td>Any Comments or Suggestions?</td>
+      <td><textarea name="comments" id="comments" cols="20" rows="5" placeholder = "Enter your comment here..."></textarea></td>
+    </tr>
+  </table>
+
+<form action="">
+    <table align="center">
+    <tr>
+      <td><label for="">* How likely is that you would recommend USIU-Africa to a friend?</label></td>
+      <td><input type="radio" name="adio">
+  Definitely</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="3"><input type="radio" name="adio">
+  Maybe</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="radio" name="adio">
+  Not sure</td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@import {
+    link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"
+  }
+  
+  body {
+    background: #272727;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1, p#description {
+    color: #faffd8;
+  }
+  
+  form{
+    background: #faffd8;
+    margin: auto;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  input[type="text"], input[type="email"], input[type="number"] {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    border: 1px dashed gray;
+  /*   Adjusts the position of the checkboxes on the text baseline   */
+  vertical-align: -5px;
+  /*   Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+    width : 150px;
+    margin: 0;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */ 
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+     box-sizing: border-box;
+  }
+  
+  

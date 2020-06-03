@@ -1,4 +1,4 @@
-html {
+/* html {
   box-sizing: border-box;
 }
 
@@ -13,6 +13,11 @@ html {
 body {
   background: #272727;
 }
+
+button {
+  background-color: purple;
+  color: antiquewhite;
+} */
 
 .galleries {
   padding: 2rem;

@@ -18,11 +18,39 @@ function Gallery(gallery) {
             return;
         }
         modal.classList.add('open');
+
+        // event listeners to be bound when we open the modal:
+        window.addEventListener('keyup', handleKeyUp);
+        nextButton.addEventListener('click', showNextImage);
+        prevButton.addEventListener('click', showPrevImage);
     }
 
     function closeModal() {
         modal.classList.remove('open');
         // TODO: add event listeners for clicks and keyboard
+        window.removeEventListener('keyup', handleKeyUp);
+        nextButton.removeEventListener('click', showNextImage);
+        prevButton.removeEventListener('click', showPrevImage);
+    }
+
+    function handleClickOutside(e) {
+        if(e.target === e.currentTarget) {  // if the thing you clicked on is the same as the thing you are listening for the click on.
+            closeModal(); // close the modal.
+        }
+    }
+
+    function handleKeyUp(e) {
+        if(e.key === 'Escape') return closeModal();
+        if(e.key === 'ArrowRight') return showNextImage();
+        if(e.key === 'ArrowLeft') return showPrevImage();
+    }
+
+    function showNextImage() {
+        showImage(currentImage.nextElementSibling || gallery.firstElementChild);
+    }
+
+    function showPrevImage() {
+        showImage(currentImage.previousElementSibling || gallery.lastElementChild);
     }
 
     function showImage(imgEl) {
@@ -32,7 +60,6 @@ function Gallery(gallery) {
         }
 
         // update the modal with this info
-        console.log(imgEl);
         modal.querySelector('img').src = imgEl.src;
         modal.querySelector('h2').textContent = imgEl.title;
         modal.querySelector('figure p').textContent = imgEl.dataset.description;
@@ -40,7 +67,26 @@ function Gallery(gallery) {
         openModal();
     }
 
-    images.forEach(image => image.addEventListener('click', e => showImage(e.currentTarget)));
+    // These are our event listeners!
+    images.forEach(image => 
+        image.addEventListener('click', e => showImage
+        (e.currentTarget))
+    );
+
+    // Loop over each image
+    images.forEach(image => {
+        // attach an event listener for each image
+        image.addEventListener('keyup', e => {
+            // when that is keyup'd, check if it was enter
+            if(e.key === 'Enter') {
+                // if it was, show that image
+                showImage(e.currentTarget);
+            }
+        });
+    });
+
+    modal.addEventListener('click', handleClickOutside);
+    
 }
 
 

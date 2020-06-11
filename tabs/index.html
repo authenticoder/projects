@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS tab Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="tabs">
+        <div role="tablist" aria-label="Programming Languages">
+          <button role="tab" aria-selected="true" id="js">JavaScript</button>
+          <button role="tab" aria-selected="false" id="python">Python</button>
+          <button role="tab" aria-selected="false" id="ruby">Ruby</button>
+        </div>
+        <div role="tabpanel" aria-labelledby="js">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
+          voluptatem provident aliquam assumenda fugiat quos nulla sit
+          consectetur qui, itaque illum maxime, doloremque corrupti voluptates?
+          Delectus iusto repellendus earum libero!
+        </div>
+        <div role="tabpanel" aria-labelledby="python" hidden>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+          blanditiis odio quia? Commodi alias modi temporibus aperiam. Assumenda
+          incidunt debitis laborum deserunt corrupti repudiandae animi minima
+          nemo, earum nobis veritatis?
+        </div>
+        <div role="tabpanel" aria-labelledby="ruby" hidden>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
+          quibusdam asperiores officia. Itaque cupiditate provident
+          reprehenderit sit maiores, quia a asperiores consequatur dolores unde
+          non doloremque consequuntur dolorum neque?
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

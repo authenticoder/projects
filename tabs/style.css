@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  marging: 0;
+  padding: 0;
+  font-family: verdana;
+}
+
+.wrapper {
+  /*   background: grey; */
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.tabs {
+  display: grid;
+}
+
+[role="tablist"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+[role="tab"] {
+  padding: 0.5rem;
+  color: purple;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+}
+
+[role="tabpanel"] {
+  background: yellow;
+  color: black;
+  padding: 2rem;
+}
+
+button[aria-selected="true"] {
+  background: yellow;
+  color: black;
+  border: 0;
+}
